@@ -1,7 +1,7 @@
 import { Stack } from "@/@types/stack";
 import StackCard from "@/app/(ui)/stack_card";
 
-export default function Stack() {
+export default function Stacks() {
   const frontEnd: Stack[] = [
     { name: "Next.js(React)", color: "string" },
     { name: "Zustand", color: "rgba(255, 108, 55, 1)" },

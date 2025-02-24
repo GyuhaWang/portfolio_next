@@ -30,6 +30,7 @@ export default function IndexButton() {
           index={data.index}
           icon={data.icon}
           title={data.title}
+          blur={false}
         />
       ))}
     </div>

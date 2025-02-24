@@ -23,7 +23,7 @@ export default function Introduction() {
             <div className="flex flex-col items-end justify-start pt-8 pl-8 pr-6">
               <div className="rounded-md bg-gray-50 pt-2 pl-4 pr-2 pb-2">
                 <p className="font-black text-lg text-blue-500">
-                  "서비스를 생각하는 개발자입니다."
+                  서비스를 생각하는 개발자입니다.
                 </p>
                 <span className="font-black">
                   대학생 미팅 서비스를 개발하여{" "}

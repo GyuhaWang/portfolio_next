@@ -1,5 +1,4 @@
 import CircleIcon from "@/app/(ui)/circle_icon";
-import Link from "next/link";
 import avatarUrl from "../../../assets/avatar.png";
 import IndexButton from "../index_button";
 

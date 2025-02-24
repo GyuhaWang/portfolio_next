@@ -4,7 +4,7 @@ export default function FlipBox({
   title,
   contents,
 }: {
-  title: String;
+  title: string;
   contents: string[];
 }) {
   return (

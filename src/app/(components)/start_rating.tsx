@@ -1,6 +1,4 @@
-// components/StarRating.tsx
-
-import React, { useState } from "react";
+import React from "react";
 import StarIcon from "@mui/icons-material/Star";
 
 export default function StarRating({ cout }: { cout: number }) {

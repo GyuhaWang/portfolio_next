@@ -86,18 +86,12 @@ const useControlledScroll = () => {
   const scrollToBottom = () => scrollTo(0, document.body.scrollHeight);
 
   const scrollToRight = () => {
-    const [currentX, currentY, screenWidth, screenHeight] = [
+    const [currentX, currentY, screenWidth] = [
       window.scrollX,
       window.scrollY,
       document.body.scrollWidth / 3,
-      document.body.scrollHeight / 3,
     ];
-    const [minX, minY, maxX, maxY] = [
-      0,
-      0,
-      document.body.scrollWidth,
-      document.body.scrollHeight,
-    ];
+    const maxX = document.body.scrollWidth;
 
     const moveX =
       currentX + screenWidth >= maxX ? maxX : currentX + screenWidth;
@@ -105,17 +99,10 @@ const useControlledScroll = () => {
     scrollTo(moveX, currentY);
   };
   const scrollToLeft = () => {
-    const [currentX, currentY, screenWidth, screenHeight] = [
+    const [currentX, currentY, screenWidth] = [
       window.scrollX,
       window.scrollY,
       document.body.scrollWidth / 3,
-      document.body.scrollHeight / 3,
-    ];
-    const [minX, minY, maxX, maxY] = [
-      0,
-      0,
-      document.body.scrollWidth,
-      document.body.scrollHeight,
     ];
 
     const moveX = currentX - screenWidth <= 0 ? 0 : currentX - screenWidth;
@@ -123,17 +110,11 @@ const useControlledScroll = () => {
     scrollTo(moveX, currentY);
   };
   const scrollToUp = () => {
-    const [currentX, currentY, screenWidth, screenHeight] = [
+    const [currentX, currentY, screenHeight] = [
       window.scrollX,
       window.scrollY,
-      document.body.scrollWidth / 3,
+
       document.body.scrollHeight / 3,
-    ];
-    const [minX, minY, maxX, maxY] = [
-      0,
-      0,
-      document.body.scrollWidth,
-      document.body.scrollHeight,
     ];
 
     const moveY = currentY - screenHeight <= 0 ? 0 : currentY - screenHeight;
@@ -141,18 +122,13 @@ const useControlledScroll = () => {
     scrollTo(currentX, moveY);
   };
   const scrollToDown = () => {
-    const [currentX, currentY, screenWidth, screenHeight] = [
+    const [currentX, currentY, screenHeight] = [
       window.scrollX,
       window.scrollY,
-      document.body.scrollWidth / 3,
+
       document.body.scrollHeight / 3,
     ];
-    const [minX, minY, maxX, maxY] = [
-      0,
-      0,
-      document.body.scrollWidth,
-      document.body.scrollHeight,
-    ];
+    const maxY = document.body.scrollHeight;
 
     const moveY =
       currentY + screenHeight >= maxY ? maxY : currentY + screenHeight;
@@ -167,12 +143,7 @@ const useControlledScroll = () => {
       document.body.scrollWidth / 3,
       document.body.scrollHeight / 3,
     ];
-    const [minX, minY, maxX, maxY] = [
-      0,
-      0,
-      document.body.scrollWidth,
-      document.body.scrollHeight,
-    ];
+    const maxX = document.body.scrollWidth;
 
     const moveY = currentY - screenHeight <= 0 ? 0 : currentY - screenHeight;
     const moveX =
@@ -187,12 +158,6 @@ const useControlledScroll = () => {
       document.body.scrollWidth / 3,
       document.body.scrollHeight / 3,
     ];
-    const [minX, minY, maxX, maxY] = [
-      0,
-      0,
-      document.body.scrollWidth,
-      document.body.scrollHeight,
-    ];
 
     const moveY = currentY - screenHeight <= 0 ? 0 : currentY - screenHeight;
     const moveX = currentX - screenWidth <= 0 ? 0 : currentX - screenWidth;
@@ -206,9 +171,9 @@ const useControlledScroll = () => {
       document.body.scrollWidth / 3,
       document.body.scrollHeight / 3,
     ];
-    const [minX, minY, maxX, maxY] = [
+    const [minX, maxX, maxY] = [
       0,
-      0,
+
       document.body.scrollWidth,
       document.body.scrollHeight,
     ];
@@ -227,12 +192,7 @@ const useControlledScroll = () => {
       document.body.scrollWidth / 3,
       document.body.scrollHeight / 3,
     ];
-    const [minX, minY, maxX, maxY] = [
-      0,
-      0,
-      document.body.scrollWidth,
-      document.body.scrollHeight,
-    ];
+    const maxY = document.body.scrollHeight;
 
     const moveY =
       currentY + screenHeight >= maxY ? maxY : currentY + screenHeight;
